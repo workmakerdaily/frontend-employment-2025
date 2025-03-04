@@ -4,22 +4,15 @@ import Link from 'next/link';
 
 const SideBar = () => {
     return (
-        <aside className="w-60 bg-blue-300 h-screen p-4 text-white">
+        <aside className="w-60 bg-[#2C2F33] h-screen p-4 pt-4 text-white">
             <nav>
                 <ul className="space-y-4">
                     <li>
-                        <Link href="/dashboard" className="block p-2 hover:bg-blue-400 rounded">
-                            Dashboard
+                        <Link href="/admin" className="menu-text block p-2">
+                            관리자 
                         </Link>
-                    </li>
-                    <li>
-                        <Link href="/settings" className="block p-2 hover:bg-blue-400 rounded">
-                            Settings
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/profile" className="block p-2 hover:bg-blue-400 rounded">
-                            Profile
+                        <Link href="/admin/users" className="menu-text block p-2">
+                            유저
                         </Link>
                     </li>
                 </ul>
