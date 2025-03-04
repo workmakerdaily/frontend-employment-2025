@@ -8,6 +8,15 @@ const SideBar = () => {
             <nav>
                 <ul className="space-y-4">
                     <li>
+                    <Link href="/pokemons" className="menu-text block p-2">
+                            포켓몬
+                        </Link>
+                        <Link href="/sign-in" className="menu-text block p-2">
+                            로그인
+                        </Link>
+                        <Link href="/sign-up" className="menu-text block p-2">
+                            회원가입
+                        </Link>
                         <Link href="/admin" className="menu-text block p-2">
                             관리자 
                         </Link>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi"; // 햄버거 메뉴 아이콘 추가
 import Image from "next/image";
+import Counter from "./Counter";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,16 +11,11 @@ const Header = () => {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <header className="bg-[#383E42] p-4 gap-8 flex justify-between items-center w-full">
+        <header className="bg-[#383E42] p-4 gap-8 flex justify-start items-center w-full">
             <Link href="/" className="flex items-center mr-8">
                 <Image src="/pokemon-logo.png" alt="Pokemon Logo" width={140} height={80} className="mr-2" />
             </Link>
-            {/* 네비게이션 메뉴 (화면이 클 때 왼쪽 정렬) */}
-            <nav className="hidden md:flex space-x-12 lg:space-x-24 pr-8 lg:pr-24">
-                <Link href="/pokemons" className="menu-text">포켓몬</Link>
-                <Link href="/sign-in" className="menu-text">로그인</Link>
-                <Link href="/sign-up" className="menu-text">회원가입</Link>
-            </nav>
+            <Counter />
 
             {/* 메뉴 토글 버튼 (화면이 작아질 때) */}
             <button
