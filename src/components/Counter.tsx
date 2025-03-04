@@ -22,7 +22,7 @@ export default function Counter() {
     }, [count, toggleTheme]);
 
     if (count === null) {
-        return <div className="text-sm text-gray-500">Loading...</div>; // 초기 로딩 상태
+        return <div className="text-sm text-gray-500">Loading...</div>;
     }
 
     return (

@@ -128,13 +128,10 @@ body {
 }
 
 .menu-text {
-  @apply text-white font-bold tracking-widest hover:opacity-50
+  @apply font-bold tracking-widest hover:opacity-50
 }
 
-.toggle {
-  @apply block px-4 py-2 mx-2 items-center text-center hover:bg-[#4F5355] hover:rounded-md
+.header-menu {
+  @apply block px-4 py-2 mx-2 items-center text-center font-semibold tracking-widest
 }
 
-.toggle-text {
-  @apply text-white my-2 text-sm font-semibold tracking-widest
-}
