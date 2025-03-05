@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX, FiHome, FiList, FiLogIn, FiUser, FiShield, FiUsers } from "react-icons/fi";
-import { SiPokemon } from "react-icons/si"; 
 import Image from "next/image";
 import Counter from "./Counter";
 import useThemeStore from "@/store/themeStore";
