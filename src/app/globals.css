@@ -131,7 +131,21 @@ body {
   @apply font-bold tracking-widest hover:opacity-50
 }
 
-.header-menu {
-  @apply block px-4 py-2 mx-2 items-center text-center font-semibold tracking-widest
+.header-button {
+  @apply block px-6 py-3 mx-4 text-lg font-semibold text-center rounded-lg;
+  @apply bg-white dark:bg-[#2C2F33] text-gray-900 dark:text-gray-200;
+  @apply hover:bg-[#eeeeee] dark:hover:bg-[#383E42] hover:text-gray-900 dark:hover:text-white;
 }
 
+
+.side-button {
+  @apply flex items-center gap-3 w-full px-4 py-3 rounded-md text-lg;
+  @apply bg-background dark:bg-[#2C2F33] text-foreground;
+  @apply hover:bg-secondary hover:text-secondary-foreground dark:hover:bg-[#25282B];
+  @apply active:bg-gray-700;
+}
+
+
+.toggle-button {
+  @apply px-2 py-1 text-sm bg-white dark:bg-black text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md disabled:opacity-50
+}

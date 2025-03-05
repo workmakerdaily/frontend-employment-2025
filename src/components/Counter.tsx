@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { FiSun, FiMoon } from "react-icons/fi";
 import useThemeStore from "@/store/themeStore";
 import "@/app/globals.css";
 
@@ -28,19 +29,19 @@ export default function Counter() {
     return (
         <div className="flex items-center gap-2 bg-background text-foreground p-2 rounded-md border border-border">
             <button
-                className="px-2 py-1 text-sm bg-primary text-primary-foreground rounded-md disabled:opacity-50"
+                className="toggle-button"
                 onClick={() => setCount((prev) => (prev !== null && prev < 10 ? prev + 1 : prev))}
                 disabled={count >= 10}
             >
-                ＋
+                <FiMoon size={18} />
             </button>
-            <span className="text-sm font-medium">{count}</span>
+            <span className="text-sm font-medium w-[12px] text-center">{count}</span>
             <button
-                className="px-2 py-1 text-sm bg-destructive text-destructive-foreground rounded-md disabled:opacity-50"
+                className="toggle-button"
                 onClick={() => setCount((prev) => (prev !== null && prev > 0 ? prev - 1 : prev))}
                 disabled={count <= 0}
             >
-                －
+                <FiSun size={18} />
             </button>
         </div>
     );

@@ -1,27 +1,41 @@
 "use client";
 
 import Link from 'next/link';
+import { FiHome, FiList, FiLogIn, FiUser, FiShield, FiUsers } from "react-icons/fi";
 
 const SideBar = () => {
     return (
-        <aside className="w-60 bg-[#2C2F33] h-screen p-4 pt-4 text-white">
+        <aside className="w-60 bg-background dark:bg-[#2C2F33] text-foreground h-screen p-4 pt-4 border-r border-border">
             <nav>
                 <ul className="space-y-4">
+                <li>
+                        <Link href="/" className="side-button">
+                            <FiHome className="w-5 h-5" /> 메인
+                        </Link>
+                    </li>
                     <li>
-                    <Link href="/pokemons" className="menu-text block p-2">
-                            포켓몬
+                        <Link href="/pokemons" className="side-button">
+                            <FiList className="w-5 h-5" /> 포켓몬
                         </Link>
-                        <Link href="/sign-in" className="menu-text block p-2">
-                            로그인
+                    </li>
+                    <li>
+                        <Link href="/sign-in" className="side-button">
+                            <FiLogIn className="w-5 h-5" /> 로그인
                         </Link>
-                        <Link href="/sign-up" className="menu-text block p-2">
-                            회원가입
+                    </li>
+                    <li>
+                        <Link href="/sign-up" className="side-button">
+                            <FiUser className="w-5 h-5" /> 회원가입
                         </Link>
-                        <Link href="/admin" className="menu-text block p-2">
-                            관리자 
+                    </li>
+                    <li>
+                        <Link href="/admin" className="side-button">
+                            <FiShield className="w-5 h-5" /> 관리자
                         </Link>
-                        <Link href="/admin/users" className="menu-text block p-2">
-                            유저
+                    </li>
+                    <li>
+                        <Link href="/admin/users" className="side-button">
+                            <FiUsers className="w-5 h-5" /> 유저
                         </Link>
                     </li>
                 </ul>

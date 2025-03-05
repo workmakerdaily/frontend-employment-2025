@@ -7,7 +7,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="ko">
             <body className="flex">
                 <ThemeProvider>
-                    {/* 화면이 md 이상일 때만 보이는 사이드바 */}
                     <aside className="hidden md:block">
                         <SideBar />
                     </aside>
