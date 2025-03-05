@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <SideBar />
                     <div className="flex flex-col w-full">
                         <Header />
-                        <main className="flex-1 p-6 pt-[100px] pl-0 md:pl-[260px]">{children}</main>
+                        <main className="flex-1 p-6 pt-[100px] pl-0 pr-0 md:pr-4 md:pl-[260px]">{children}</main>
                     </div>
                 </ThemeProvider>
             </body>
