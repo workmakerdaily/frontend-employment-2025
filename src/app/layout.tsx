@@ -7,12 +7,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="ko">
             <body className="flex">
                 <ThemeProvider>
-                    <aside className="hidden md:block">
-                        <SideBar />
-                    </aside>
-                    <div className="flex-1 flex flex-col">
+                    <SideBar />
+                    <div className="flex flex-col w-full">
                         <Header />
-                        <main className="flex-1 p-4">{children}</main>
+                        <main className="flex-1 p-6 pt-[100px] pl-0 md:pl-[260px]">{children}</main>
                     </div>
                 </ThemeProvider>
             </body>

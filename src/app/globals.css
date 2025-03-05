@@ -127,6 +127,10 @@ body {
   }
 }
 
+.layout-title {
+  @apply text-2xl sm:text-3xl lg:text-3xl font-bold px-4
+}
+
 .menu-text {
   @apply font-bold tracking-widest hover:opacity-50
 }

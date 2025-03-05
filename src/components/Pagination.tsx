@@ -14,7 +14,7 @@ const Pagination = ({ page, setPage }: Props) => {
             <button
                 onClick={() => setPage(page - 1)}
                 disabled={page === 0}
-                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary text-secondary-foreground shadow-md
+                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary text-secondary-foreground
                         hover:bg-secondary/80 disabled:opacity-50"
             >
                 <FiChevronLeft size={20} />
@@ -28,7 +28,7 @@ const Pagination = ({ page, setPage }: Props) => {
             {/* 다음 페이지 버튼 */}
             <button
                 onClick={() => setPage(page + 1)}
-                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary text-secondary-foreground shadow-md
+                className="flex items-center gap-2 px-4 py-2 rounded-md bg-secondary text-secondary-foreground
                         hover:bg-secondary/80"
             >
                 <FiChevronRight size={20} />

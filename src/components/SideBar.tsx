@@ -5,10 +5,10 @@ import { FiHome, FiList, FiLogIn, FiUser, FiShield, FiUsers } from "react-icons/
 
 const SideBar = () => {
     return (
-        <aside className="w-60 bg-background dark:bg-[#2C2F33] text-foreground h-screen p-4 pt-4 border-r border-border">
+        <aside className="fixed top-0 left-0 h-full w-60 bg-background hidden md:block dark:bg-[#2C2F33] text-foreground border-r border-border pt-[80px] p-4 z-50">
             <nav>
                 <ul className="space-y-4">
-                <li>
+                    <li>
                         <Link href="/" className="side-button">
                             <FiHome className="w-5 h-5" /> 메인
                         </Link>

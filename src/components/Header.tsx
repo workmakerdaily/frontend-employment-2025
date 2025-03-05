@@ -9,29 +9,31 @@ import useThemeStore from "@/store/themeStore";
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { theme } = useThemeStore();
-
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <header className="p-4 gap-8 flex justify-start items-center w-full border-b bg-[#eeeeee] dark:bg-[#202225] text-foreground border-border">
-            {/* 로고 */}
-            <Link href="/" className="flex items-center mr-8">
-                <Image src="/pokemon-logo.png" alt="Pokemon Logo" width={140} height={80} className="mr-2" />
-            </Link>
+        <>
+            {/* 고정된 헤더 (사이드바 크기만큼 이동) */}
+            <header className="fixed top-0 left-0 md:left-60 w-full md:w-[calc(100%-15rem)] z-40 p-4 flex justify-start items-center border-b bg-[#eeeeee] dark:bg-[#202225] text-foreground border-border">
+                {/* 로고 */}
+                <Link href="/" className="flex items-center mr-8">
+                    <Image src="/pokemon-logo.png" alt="Pokemon Logo" width={140} height={80} className="mr-2" />
+                </Link>
 
-            <Counter />
+                <Counter />
 
-            {/* 햄버거 메뉴 버튼 */}
-            <button
-                className="md:hidden p-3 bg-[#d1d1d1] dark:bg-[#545b60] text-primary-foreground rounded-lg ml-auto transition-all duration-200 hover:bg-[#b8b8b8] dark:hover:bg-[#474C50]"
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-            </button>
+                {/* 햄버거 메뉴 버튼 */}
+                <button
+                    className="md:hidden p-3 bg-[#d1d1d1] dark:bg-[#545b60] text-primary-foreground rounded-lg ml-auto transition-all duration-200 hover:bg-[#b8b8b8] dark:hover:bg-[#474C50]"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+                </button>
+            </header>
 
             {/* 모바일 메뉴 */}
             {isOpen && (
-                <div className="fixed inset-x-0 top-20 z-20 bg-white dark:bg-[#2C2F33] text-secondary-foreground md:hidden rounded-b-lg py-4">
+                <div className="fixed top-[80px] left-60 w-[calc(100%-15rem)] z-30 bg-white dark:bg-[#2C2F33] text-secondary-foreground md:hidden rounded-b-lg py-4 shadow-lg border border-border">
                     <ul className="space-y-3 text-center">
                         <li>
                             <Link href="/" className="header-button" onClick={closeMenu}>
@@ -66,7 +68,7 @@ const Header = () => {
                     </ul>
                 </div>
             )}
-        </header>
+        </>
     );
 };
 
