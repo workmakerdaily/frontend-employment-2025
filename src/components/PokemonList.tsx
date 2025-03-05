@@ -5,6 +5,7 @@ import usePokemon from "@/hooks/usePokemon";
 import PokemonCard from "./PokemonCard";
 import Pagination from "./Pagination";
 import { GetPokemon } from "@/types";
+import LoadingSpinner from "./LoadingSpinner";
 
 const LIMIT = 20; // 한 페이지에 보여줄 포켓몬 개수
 
@@ -13,7 +14,7 @@ const PokemonList = () => {
     const offset = page * LIMIT;
     const { pokemonList, isLoading, error } = usePokemon(LIMIT, offset);
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <LoadingSpinner />
     if (error) return <p className="text-red-500">{error.message}</p>;
 
     return (
