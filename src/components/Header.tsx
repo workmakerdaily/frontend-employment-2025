@@ -17,7 +17,7 @@ const Header = () => {
             <header className="fixed top-0 left-0 md:left-60 w-full md:w-[calc(100%-15rem)] z-40 p-4 flex justify-start items-center border-b bg-[#eeeeee] dark:bg-[#202225] text-foreground border-border">
                 {/* 로고 */}
                 <Link href="/" className="flex items-center mr-8">
-                    <Image src="/pokemon-logo.png" alt="Pokemon Logo" width={140} height={80} className="mr-2" />
+                    <div className="md:ml-5 text-4xl">POKÉMON</div>
                 </Link>
 
                 <Counter />
