@@ -7,7 +7,7 @@ const Users: User[] = [
     { name: "웅이", email: "웅이@pokemon.com", age: 15, region: "회색시티" },
 ];
 
-export default function AdminUsersPage() {
+export default function UsersPage() {
     return (
         <div className="flex flex-col items-center min-h-screen bg-background text-foreground p-4">
             <h1 className="text-3xl font-bold mb-6">유저 목록 관리</h1>
