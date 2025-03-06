@@ -4,9 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiHome, FiList, FiLogIn, FiUser, FiShield, FiUsers } from "react-icons/fi";
 
+// component: SideBar 컴포넌트 //
 const SideBar = () => {
-    const pathname = usePathname(); // 현재 경로 감지
 
+    // variable: 현재 경로 감지 //
+    const pathname = usePathname();
+
+    // render: SideBar 컴포넌트 렌더링 //
     return (
         <aside className="fixed top-0 left-0 h-full w-60 bg-background hidden md:block dark:bg-[#2C2F33] text-foreground border-r border-border pt-[80px] p-4 z-50">
             <nav>

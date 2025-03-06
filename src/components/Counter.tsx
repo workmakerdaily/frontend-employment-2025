@@ -5,16 +5,22 @@ import { FiSun, FiMoon } from "react-icons/fi";
 import useThemeStore from "@/store/themeStore";
 import "@/app/globals.css";
 
-export default function Counter() {
-    const [count, setCount] = useState<number | null>(null); // 초기 값 null로 설정
+// component: Counter 컴포넌트 //
+const Counter = () => {
+
+    // state: 카운트 상태 관리 //
+    const [count, setCount] = useState<number | null>(null);
+
+    // context: 테마 상태 및 테마 변경 함수 //
     const { theme, toggleTheme } = useThemeStore();
 
-    // useEffect에서 localStorage 값을 가져옴 (클라이언트에서 실행)
+    // effect: localStorage에서 카운트 값 불러오기 //
     useEffect(() => {
         const storedCount = Number(localStorage.getItem("count")) || 0;
         setCount(storedCount);
     }, []);
 
+    // effect: 카운트 값 변경 시 localStorage 저장 & 테마 변경 //
     useEffect(() => {
         if (count !== null) {
             localStorage.setItem("count", count.toString());
@@ -26,6 +32,7 @@ export default function Counter() {
         return <div className="text-sm text-gray-500">Loading...</div>;
     }
 
+    // render:  Counter 컴포넌트 렌더링링 //
     return (
         <div className="flex items-center gap-2 bg-background text-foreground p-2 rounded-md border border-border">
             <button
@@ -46,3 +53,5 @@ export default function Counter() {
         </div>
     );
 }
+
+export default Counter;

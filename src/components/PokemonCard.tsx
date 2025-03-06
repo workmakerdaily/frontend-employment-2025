@@ -1,7 +1,10 @@
 import { GetPokemon } from "@/types";
 import Image from "next/image";
 
+// component: PokemonCard 컴포넌트 //
 const PokemonCard = ({ name, image }: GetPokemon) => {
+
+    // render: PokemonCard 컴포넌트 렌더링 //
     return (
         <div className="flex flex-col items-start">
             

@@ -4,20 +4,25 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
+// component: Banner 컴포넌트 //
 const Banner = () => {
+
+    // state: 글리치 효과 활성화 여부 //
     const [glitch, setGlitch] = useState(false);
 
+    // effect: 글리치 효과 일정 간격으로 토글 //
     useEffect(() => {
         const interval = setInterval(() => {
             setGlitch((prev) => !prev);
-        }, 1200); // 글리치 간격 유지
+        }, 1200);
 
         return () => clearInterval(interval);
     }, []);
 
+    // render: Banner 컴포넌트 렌더링 //
     return (
         <div className="relative w-full h-[300px] sm:h-[400px] overflow-hidden flex justify-center items-center bg-black">
-            {/* 배너 이미지 */}
+
             <div className="relative w-full h-full overflow-hidden">
                 <Image
                     src="/main-banner.jpg"
@@ -31,7 +36,6 @@ const Banner = () => {
                 />
             </div>
 
-            {/* 글리치 텍스트 */}
             <h1 className={clsx(
                 "absolute text-white dark:text-black text-3xl sm:text-5xl font-semibold glitch-text",
                 glitch ? "animate-fixed-glitch-text" : ""

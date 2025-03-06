@@ -2,11 +2,15 @@
 
 import { ButtonHTMLAttributes } from "react";
 
+// interface: Button 컴포넌트의 Props //
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
 }
 
-export default function Button({ children, ...props }: Props) {
+// component: 버튼 컴포넌트 //
+const Button = ({ children, ...props }: Props) => {
+
+    // render: 버튼 컴포넌트 렌더링 //
     return (
         <button
             {...props}
@@ -16,3 +20,5 @@ export default function Button({ children, ...props }: Props) {
         </button>
     );
 }
+
+export default Button;
